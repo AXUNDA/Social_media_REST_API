@@ -17,14 +17,12 @@ const postRoute = require('./routes/postRoute.js')
 
 
 dotenv.config()
-mongoose.connect(process.env.MONGO_URL).then(()=> console.log("connected to the database"))
+mongoose.connect("mongodb://localhost:27017/AHOYdb").then(()=> console.log("connected to the database"))
 
 app.use("/api/users",userRoute)
 app.use("/api/auth",authRoute)
 app.use("/api/posts",postRoute)
-// app.post("/",function(req,res){
-//     console.log(req.body)
-// })
+
 
 
 

@@ -1,13 +1,14 @@
 const mongoose = require('mongoose')
 const postSchema = new mongoose.Schema({
     userId:{
-        type: 'string',
+        type: String,
         required: true,
     },
     desc:{
-        type: 'string',
+        type: String,
         min:2,
-        max:500
+        max:500,
+        required: true,
 
     },
     likes:{
