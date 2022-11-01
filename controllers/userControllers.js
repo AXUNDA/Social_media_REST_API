@@ -98,7 +98,7 @@ exports.followUser = async(req, res)=>{
 
       try {
             if(id == req.body.userId){
-                return  res.status(200).json({
+                return  res.status(400).json({
                         status:"invalid",
                         error:"you can not follow yourself"
                   })
